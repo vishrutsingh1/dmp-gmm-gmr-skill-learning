@@ -136,10 +136,4 @@ dmp-gmm-gmr-skill-learning/
 1. `cd matlab` and run `run_dmp_gmm_gmr.m` (or open `dmp_gmm_gmr.mlx` for the full write-up).
 2. The last section writes `SimData.mat`. Open `RobotSimulation.slx` and press **Run** to execute the learned "G" on the 2-link arm.
 
-## Limitations and next steps
 
-- **Per-demonstration normalisation:** the forcing term of every demonstration is currently computed against the start and goal of demo 1. Normalising each demo by its own (g − x₀) should align the demonstrations better before the GMM averages them.
-- **Frame-dependent scaling:** the classic s·(g − x₀) scaling works per axis, so it stretches the letter unevenly, over-scales when start and goal are close, and mirrors the shape when the goal displacement flips sign. Next step: compare with rotation + uniform-scale formulations (e.g. Koutras & Doulgeri, RO-MAN 2020).
-- **Timing:** the 1 s execution is far too fast for the arm. Use the DMP's temporal scaling τ to slow it down, and add torque limits to the simulation.
-- **Singularities:** plan the letter's placement so the arm stays away from full extension (joint 2 → 180°).
-- **Learning-based control:** compare the DMP with modern imitation-learning policies (e.g. Diffusion Policy) on the same demonstrations.
