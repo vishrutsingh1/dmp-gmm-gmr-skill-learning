@@ -2,9 +2,9 @@
 
 **A robot learns to write the letter "G" from 5 human demonstrations. Replacing the standard locally weighted regression (WLR) forcing term of a Dynamic Movement Primitive with a Gaussian Mixture Model + Gaussian Mixture Regression (GMM-GMR) cuts reproduction error by about 15× (RMSE 5.16 → 0.35), and the learned skill is then executed on a simulated 2-link arm.**
 
-| WLR (red) vs GMM-GMR (green) against the 5 demonstrations | Learned skill executed on a 2-link arm |
+| WLR (red) vs GMM-GMR (green) against the 5 demonstrations | Learned skill executed on a 2-link arm (3× slow motion) |
 |:---:|:---:|
-| ![WLR vs GMM-GMR](figures/learning/wlr_vs_gmr.png) | ![Robot drawing G](figures/robot/robot_drawing_g.png) |
+| ![WLR vs GMM-GMR](figures/learning/wlr_vs_gmr.png) | ![Robot drawing G](figures/robot/robot_drawing_g.gif) |
 
 <!-- Add the YouTube link to the video walkthrough here -->
 
