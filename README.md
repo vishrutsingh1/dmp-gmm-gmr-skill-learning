@@ -8,6 +8,8 @@
 
 <!-- Add the YouTube link to the video walkthrough here -->
 
+**Based on:** A. Hewitt, C. Yang, Y. Li, R. Cui, *DMP and GMR based Teaching by Demonstration for a KUKA LBR Robot*, IEEE ICAC 2017 ([DOI: 10.23919/IConAC.2017.8081982](https://doi.org/10.23919/IConAC.2017.8081982)). This repo reimplements the paper's DMP + GMM/GMR approach and extends it with a WLR baseline comparison, parameter studies (number of demonstrations, K, α, β, decay factor), goal generalisation, and execution on a simulated 2-link arm with computed-torque control.
+
 ---
 
 ## Overview
@@ -121,8 +123,6 @@ dmp-gmm-gmr-skill-learning/
 │   ├── MixtureGaussians.m       # GMM (EM) + GMR implementation
 │   ├── RobotSimulation.slx      # 2-link arm: IK, kinematics, computed-torque control
 │   └── Demonstrations.mat       # handwritten "G" demonstrations
-├── report/
-│   └── dmp_gmm_gmr_report.pdf
 └── figures/
     ├── learning/
     ├── evaluation/
@@ -135,5 +135,4 @@ dmp-gmm-gmr-skill-learning/
 
 1. `cd matlab` and run `run_dmp_gmm_gmr.m` (or open `dmp_gmm_gmr.mlx` for the full write-up).
 2. The last section writes `SimData.mat`. Open `RobotSimulation.slx` and press **Run** to execute the learned "G" on the 2-link arm.
-
 
